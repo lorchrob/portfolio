@@ -1,0 +1,23 @@
+<div class="jumbotron text-center">
+  <h1 class="display-4">Robert Lorch</h1>
+  <p class="lead">Computer science major, Grinnell College '21</p>
+</div>
+
+    <div class = "container">
+      <div class = "row">
+        <% @cards.each do |card| %>
+          <div class = "col-lg-4 col-md-6 col-sm-12 mb-3", align = "center">
+            <div class="card">
+              <%= image_tag(card[:image], height: '200', class: 'card-img-top', style: "border: 2px solid black;") %>
+              <div class="card-body">
+                <h2 style = "color:black"> <%= card[:title] %></h2>
+                <p><%= card[:description] %><p>
+              </div>
+              <div class="card-footer">
+                <a href = '<%= card[:link] %>' class = "btn btn-primary" target="_blank">View Project</a>
+              </div>
+            </div>  
+          </div>
+        <% end %>
+      </div>
+</div>
